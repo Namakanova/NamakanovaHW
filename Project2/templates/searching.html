@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="content">
+        <h2>ѕоиск словарей</h2>
+        <form action="/results">
+            <div>
+                <label>»м€ информанта:</label>
+                <div>
+                    <input type="text" name="informant" placeholder="»м€ информанта">
+                </div>
+            </div>
+            <div>
+                <label>язык:</label>
+                <div>
+                    <input type="text" name="language" placeholder="язык" required>
+                </div>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="with10words">
+                    »скать только словари с 10 словами и более
+                </label>
+            </div>
+            <button type="submit">»скать</button>
+        </form>
+    </div>
+{% endblock %}
